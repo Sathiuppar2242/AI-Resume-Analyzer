@@ -73,6 +73,12 @@
             Analyze Your Resume
         </h2>
 
+        <p style="text-align:center; margin-bottom:25px;">
+            Upload your resume and paste the complete job description
+            to get an AI-powered compatibility analysis.
+        </p>
+
+
         <form
             action="/analyze"
             method="POST"
@@ -82,7 +88,7 @@
             <div class="form-group">
 
                 <label for="resume">
-                    Upload Your Resume
+                    📄 Upload Your Resume
                 </label>
 
                 <input
@@ -99,14 +105,32 @@
             <div class="form-group">
 
                 <label for="job_description">
-                    Paste Job Description
+                    💼 Complete Job Description
                 </label>
 
                 <textarea
                     id="job_description"
                     name="job_description"
-                    rows="10"
-                    placeholder="Paste the complete job description here..."
+                    rows="12"
+                    placeholder="Paste the complete job description here...
+
+Example:
+Job Title: Python Developer
+
+Requirements:
+- Python
+- Flask
+- Django
+- SQL
+- REST API
+- Git
+- Problem solving
+
+Responsibilities:
+- Develop Python applications
+- Build REST APIs
+- Work with databases
+- Debug and maintain applications"
                     required
                 ></textarea>
 
@@ -114,7 +138,7 @@
 
 
             <button type="submit">
-                Analyze Resume
+                🤖 Analyze Resume
             </button>
 
         </form>
@@ -130,6 +154,7 @@
 
 
         <div class="feature-container">
+
 
             <div class="feature-card">
 
@@ -155,11 +180,11 @@
                 </div>
 
                 <h3>
-                    Job Description Matching
+                    Job Matching
                 </h3>
 
                 <p>
-                    Compare your resume directly with the complete job description.
+                    Compare your resume with the complete job description.
                 </p>
 
             </div>
@@ -176,7 +201,7 @@
                 </h3>
 
                 <p>
-                    Get useful recommendations to improve your resume.
+                    Get recommendations to improve your resume.
                 </p>
 
             </div>
@@ -193,7 +218,7 @@
                 </h3>
 
                 <p>
-                    Get a score based on how well your resume matches the job description.
+                    Understand how well your resume matches the target role.
                 </p>
 
             </div>
@@ -210,6 +235,7 @@
         </p>
 
     </footer>
+
 
 </body>
 
