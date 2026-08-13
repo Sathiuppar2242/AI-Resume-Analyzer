@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Resume Analysis - ResumeAI</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1f2937;
+        }
+
+        header {
+            background: white;
+            padding: 20px 8%;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .header-section h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .header-section p {
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+
+        .job-badge {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 18px;
+            border-radius: 20px;
+            background: #dbeafe;
+            color: #1d4ed8;
+            font-weight: bold;
+        }
+
+        .score-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .score-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+        }
+
+        .score-card h2 {
+            margin-bottom: 10px;
+        }
+
+        .score {
+            font-size: 60px;
+            font-weight: bold;
+            color: #2563eb;
+            margin: 15px 0;
+        }
+
+        .score-label {
+            color: #6b7280;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .card h2 {
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .card ul {
+            padding-left: 20px;
+        }
+
+        .card li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .missing-skill {
+            background: #fee2e2;
+            color: #b91c1c;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .empty-message {
+            color: #6b7280;
+        }
+
+        .back-button {
+            display: block;
+            width: 260px;
+            margin: 40px auto;
+            padding: 14px;
+            text-align: center;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background: #1d4ed8;
+        }
+
+        @media (max-width: 750px) {
+
+            .score-container {
+                grid-template-columns: 1fr;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-section h1 {
+                font-size: 30px;
+            }
+
+            .score {
+                font-size: 50px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            ResumeAI
+        </div>
+
+    </header>
+
+
+    <div class="container">
+
+
+        <div class="header-section">
+
+            <h1>
+                Resume Analysis
+            </h1>
+
+            <p>
+                Resume:
+                <strong>{{ resume_name }}</strong>
+            </p>
+
+            {% if analysis.detected_job %}
+
+                <div class="job-badge">
+                    Detected Job: {{ analysis.detected_job.title() }}
+                </div>
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="score-container">
+
+
+            <div class="score-card">
+
+                <h2>
+                    📊 Overall Resume Score
+                </h2>
+
+                <div class="score">
+                    {{ analysis.resume_score }}%
+                </div>
+
+                <p class="score-label">
+                    Overall resume quality and job relevance
+                </p>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <h2>
+                    🎯 Skill Match
+                </h2>
+
+                <div class="score">
+                    {{ analysis.skill_match }}%
+                </div>
+
+                <p class="score-label">
+                    Required skills found in your resume
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="grid">
+
+
+            <div class="card">
+
+                <h2>
+                    🛠️ Skills Found
+                </h2>
+
+                {% if analysis.skills %}
+
+                    <div class="skills">
+
+                        {% for skill in analysis.skills %}
+
+                            <span class="skill">
+                                {{ skill }}
+                            </span>
+
+                        {% endfor %}
+
+                    </div>
+
+                {% else %}
+
+                    <p class="empty-message">
+                        No matching skills found.
+                    </p>
+
+                {% endif %}
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>
+                    📋 Required Skills
+                </h2>
+
+                {% if analysis.required_skills %}
+
+                    <div class="skills">
+
+                        {% for skill in analysis.required_skills %}
+
+                            <span class="skill">
+                                {{ skill }}
+                            </span>
+
+                        {% endfor %}
+
+                    </div>
+
+                {% else %}
+
+                    <p class="empty-message">
+                        No recognized skills found in the job description.
+                    </p>
+
+                {% endif %}
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>
+                    💪 Strengths
+                </h2>
+
+                {% if analysis.strengths %}
+
+                    <ul>
+
+                        {% for strength in analysis.strengths %}
+
+                            <li>
+                                {{ strength }}
+                            </li>
+
+                        {% endfor %}
+
+                    </ul>
+
+                {% else %}
+
+                    <p class="empty-message">
+                        No strengths identified.
+                    </p>
+
+                {% endif %}
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>
+                    ⚠️ Weaknesses
+                </h2>
+
+                {% if analysis.weaknesses %}
+
+                    <ul>
+
+                        {% for weakness in analysis.weaknesses %}
+
+                            <li>
+                                {{ weakness }}
+                            </li>
+
+                        {% endfor %}
+
+                    </ul>
+
+                {% else %}
+
+                    <p class="empty-message">
+                        No major weaknesses identified.
+                    </p>
+
+                {% endif %}
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>
+                    🎯 Missing Skills
+                </h2>
+
+                {% if analysis.missing_skills %}
+
+                    <div class="skills">
+
+                        {% for skill in analysis.missing_skills %}
+
+                            <span class="missing-skill">
+                                {{ skill }}
+                            </span>
+
+                        {% endfor %}
+
+                    </div>
+
+                {% else %}
+
+                    <p class="empty-message">
+                        No major missing skills identified.
+                    </p>
+
+                {% endif %}
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>
+                    💡 Recommendations
+                </h2>
+
+                {% if analysis.recommendations %}
+
+                    <ul>
+
+                        {% for recommendation in analysis.recommendations %}
+
+                            <li>
+                                {{ recommendation }}
+                            </li>
+
+                        {% endfor %}
+
+                    </ul>
+
+                {% endif %}
+
+            </div>
+
+
+        </div>
+
+
+        <a href="/" class="back-button">
+            Analyze Another Resume
+        </a>
+
+
+    </div>
+
+</body>
+
+</html>

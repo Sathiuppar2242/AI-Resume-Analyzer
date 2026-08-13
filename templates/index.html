@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ResumeAI - AI-Powered Resume Analyzer</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            ResumeAI
+        </div>
+
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#analyzer">Analyze Resume</a>
+
+            <a href="#features">Features</a>
+
+        </nav>
+
+    </header>
+
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                Make Your Resume
+                <span>Job-Ready</span>
+            </h1>
+
+            <p>
+                ResumeAI analyzes your resume against a complete
+                job description and identifies skills, strengths,
+                weaknesses, missing requirements and areas for improvement.
+            </p>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <img
+                src="{{ url_for('static', filename='images/hero/resume-ai.png') }}"
+                alt="AI Resume Analyzer"
+            >
+
+        </div>
+
+    </section>
+
+
+    <section class="analyzer-box" id="analyzer">
+
+        <h2>
+            Analyze Your Resume
+        </h2>
+
+        <form
+            action="/analyze"
+            method="POST"
+            enctype="multipart/form-data"
+        >
+
+            <div class="form-group">
+
+                <label for="resume">
+                    Upload Your Resume
+                </label>
+
+                <input
+                    type="file"
+                    id="resume"
+                    name="resume"
+                    accept=".pdf,.docx"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="job_description">
+                    Paste Job Description
+                </label>
+
+                <textarea
+                    id="job_description"
+                    name="job_description"
+                    rows="10"
+                    placeholder="Paste the complete job description here..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button type="submit">
+                Analyze Resume
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <section class="features" id="features">
+
+        <h2>
+            What ResumeAI Can Do
+        </h2>
+
+
+        <div class="feature-container">
+
+            <div class="feature-card">
+
+                <div class="icon">
+                    📄
+                </div>
+
+                <h3>
+                    Resume Analysis
+                </h3>
+
+                <p>
+                    Analyze the content and structure of your resume.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+                    🎯
+                </div>
+
+                <h3>
+                    Job Description Matching
+                </h3>
+
+                <p>
+                    Compare your resume directly with the complete job description.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+                    🤖
+                </div>
+
+                <h3>
+                    AI Suggestions
+                </h3>
+
+                <p>
+                    Get useful recommendations to improve your resume.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+                    📊
+                </div>
+
+                <h3>
+                    Resume Score
+                </h3>
+
+                <p>
+                    Get a score based on how well your resume matches the job description.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 ResumeAI | AI-Powered Resume Analyzer
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
