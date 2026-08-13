@@ -5,10 +5,7 @@
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Resume Analysis - ResumeAI</title>
 
@@ -97,6 +94,23 @@
 
         .score-label {
             color: #6b7280;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 18px;
+            background: #e5e7eb;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: {{ analysis.skill_match }}%;
+            background: #2563eb;
+            border-radius: 20px;
+            transition: width 0.8s ease;
         }
 
         .grid {
@@ -222,7 +236,8 @@
             {% if analysis.detected_job %}
 
                 <div class="job-badge">
-                    Detected Job: {{ analysis.detected_job.title() }}
+                    Detected Job:
+                    {{ analysis.detected_job.title() }}
                 </div>
 
             {% endif %}
@@ -263,6 +278,12 @@
                 <p class="score-label">
                     Required skills found in your resume
                 </p>
+
+                <div class="progress-container">
+
+                    <div class="progress-bar"></div>
+
+                </div>
 
             </div>
 
