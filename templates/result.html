@@ -66,6 +66,43 @@
             font-weight: bold;
         }
 
+        .summary-card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .summary-card h2 {
+            margin-bottom: 20px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .summary-item {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .summary-item strong {
+            display: block;
+            font-size: 28px;
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+
+        .summary-item span {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
         .score-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -107,7 +144,7 @@
 
         .progress-bar {
             height: 100%;
-            width: {{ analysis.skill_match }}%;
+            width: 0%;
             background: #2563eb;
             border-radius: 20px;
             transition: width 0.8s ease;
@@ -166,10 +203,17 @@
             color: #6b7280;
         }
 
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 40px auto;
+            flex-wrap: wrap;
+        }
+
         .back-button {
             display: block;
             width: 260px;
-            margin: 40px auto;
             padding: 14px;
             text-align: center;
             background: #2563eb;
@@ -183,6 +227,35 @@
             background: #1d4ed8;
         }
 
+        .home-button {
+            background: #111827;
+        }
+
+        .home-button:hover {
+            background: #374151;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 25px;
+            text-align: center;
+            background: #111827;
+            color: white;
+        }
+
+        footer p + p {
+            margin-top: 8px;
+            color: #9ca3af;
+        }
+
+        @media (max-width: 850px) {
+
+            .summary-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
         @media (max-width: 750px) {
 
             .score-container {
@@ -190,6 +263,10 @@
             }
 
             .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .summary-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -215,7 +292,6 @@
         <div class="logo">
             ResumeAI
         </div>
-
     </header>
 
 
@@ -244,6 +320,74 @@
 
         </div>
 
+
+        <!-- ANALYSIS SUMMARY -->
+
+        <div class="summary-card">
+
+            <h2>
+                📋 Analysis Summary
+            </h2>
+
+            <div class="summary-grid">
+
+                <div class="summary-item">
+
+                    <strong>
+                        {{ analysis.resume_score }}%
+                    </strong>
+
+                    <span>
+                        Overall Score
+                    </span>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <strong>
+                        {{ analysis.skill_match }}%
+                    </strong>
+
+                    <span>
+                        Skill Match
+                    </span>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <strong>
+                        {{ analysis.skills|length }}
+                    </strong>
+
+                    <span>
+                        Skills Found
+                    </span>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <strong>
+                        {{ analysis.missing_skills|length }}
+                    </strong>
+
+                    <span>
+                        Missing Skills
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SCORE CARDS -->
 
         <div class="score-container">
 
@@ -281,7 +425,10 @@
 
                 <div class="progress-container">
 
-                    <div class="progress-bar"></div>
+                    <div
+                        class="progress-bar"
+                        data-score="{{ analysis.skill_match }}"
+                    ></div>
 
                 </div>
 
@@ -290,6 +437,8 @@
 
         </div>
 
+
+        <!-- DETAILS -->
 
         <div class="grid">
 
@@ -477,12 +626,57 @@
         </div>
 
 
-        <a href="/" class="back-button">
-            Analyze Another Resume
-        </a>
+        <!-- BUTTONS -->
+
+        <div class="buttons">
+
+            <a href="/" class="back-button">
+                Analyze Another Resume
+            </a>
+
+            <a href="/" class="back-button home-button">
+                Back to Home
+            </a>
+
+        </div>
 
 
     </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 ResumeAI
+        </p>
+
+        <p>
+            AI-Powered Resume Analysis & Job Matching
+        </p>
+
+    </footer>
+
+
+    <!-- PROGRESS BAR SCRIPT -->
+
+    <script>
+
+        const progressBar =
+            document.querySelector(".progress-bar");
+
+        if (progressBar) {
+
+            const score =
+                progressBar.getAttribute("data-score");
+
+            progressBar.style.width = score + "%";
+
+        }
+
+    </script>
+
 
 </body>
 
