@@ -139,8 +139,6 @@
             font-size: 16px;
         }
 
-        /* SKILL MATCH VISUALIZATION */
-
         .skill-match-wrapper {
             margin-top: 25px;
             text-align: left;
@@ -242,20 +240,34 @@
             flex-wrap: wrap;
         }
 
-        .back-button {
+        .button {
             display: block;
             width: 260px;
             padding: 14px;
             text-align: center;
-            background: #2563eb;
             color: white;
             text-decoration: none;
+            border: none;
             border-radius: 8px;
             font-weight: bold;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .back-button {
+            background: #2563eb;
         }
 
         .back-button:hover {
             background: #1d4ed8;
+        }
+
+        .download-button {
+            background: #059669;
+        }
+
+        .download-button:hover {
+            background: #047857;
         }
 
         .home-button {
@@ -485,10 +497,10 @@
                             Skill Compatibility
                         </span>
 
-                        <span
-                            class="skill-match-percentage"
-                        >
+                        <span class="skill-match-percentage">
+
                             {{ analysis.skill_match }}%
+
                         </span>
 
                     </div>
@@ -729,19 +741,105 @@
 
         <div class="buttons">
 
-            <a
-                href="/"
-                class="back-button"
+
+            <!-- DOWNLOAD REPORT -->
+
+            <form
+                action="/download-report"
+                method="POST"
             >
-                Analyze Another Resume
-            </a>
+
+                <input
+                    type="hidden"
+                    name="resume_name"
+                    value="{{ resume_name }}"
+                >
+
+
+                <input
+                    type="hidden"
+                    name="resume_score"
+                    value="{{ analysis.resume_score }}"
+                >
+
+
+                <input
+                    type="hidden"
+                    name="skill_match"
+                    value="{{ analysis.skill_match }}"
+                >
+
+
+                <input
+                    type="hidden"
+                    name="skills"
+                    value="{{ analysis.skills|join('|') }}"
+                >
+
+
+                <input
+                    type="hidden"
+                    name="missing_skills"
+                    value="{{ analysis.missing_skills|join('|') }}"
+                >
+
+
+                <input
+                    type="hidden"
+                    name="strengths"
+                    value="{{ analysis.strengths|join('|') }}"
+                >
+
+
+                <input
+                    type="hidden"
+                    name="weaknesses"
+                    value="{{ analysis.weaknesses|join('|') }}"
+                >
+
+
+                <input
+                    type="hidden"
+                    name="recommendations"
+                    value="{{ analysis.recommendations|join('|') }}"
+                >
+
+
+                <button
+                    type="submit"
+                    class="button download-button"
+                >
+
+                    📥 Download PDF Report
+
+                </button>
+
+            </form>
+
+
+            <!-- ANALYZE ANOTHER -->
 
             <a
                 href="/"
-                class="back-button home-button"
+                class="button back-button"
             >
-                Back to Home
+
+                Analyze Another Resume
+
             </a>
+
+
+            <!-- HOME -->
+
+            <a
+                href="/"
+                class="button home-button"
+            >
+
+                Back to Home
+
+            </a>
+
 
         </div>
 
