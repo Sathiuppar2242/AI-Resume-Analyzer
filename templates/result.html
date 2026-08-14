@@ -9,7 +9,6 @@
 
     <title>Resume Analysis - ResumeAI</title>
 
-
     <style>
 
         * {
@@ -18,13 +17,11 @@
             box-sizing: border-box;
         }
 
-
         body {
             font-family: Arial, sans-serif;
             background: #f5f7fb;
             color: #1f2937;
         }
-
 
         header {
             background: white;
@@ -32,13 +29,11 @@
             border-bottom: 1px solid #e5e7eb;
         }
 
-
         .logo {
             font-size: 28px;
             font-weight: bold;
             color: #2563eb;
         }
-
 
         .container {
             width: 90%;
@@ -46,24 +41,20 @@
             margin: 40px auto;
         }
 
-
         .header-section {
             text-align: center;
             margin-bottom: 35px;
         }
-
 
         .header-section h1 {
             font-size: 38px;
             margin-bottom: 15px;
         }
 
-
         .header-section p {
             color: #6b7280;
             margin-bottom: 8px;
         }
-
 
         .job-badge {
             display: inline-block;
@@ -75,7 +66,6 @@
             font-weight: bold;
         }
 
-
         .summary-card {
             background: white;
             padding: 30px;
@@ -84,18 +74,15 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
         }
 
-
         .summary-card h2 {
             margin-bottom: 20px;
         }
-
 
         .summary-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 15px;
         }
-
 
         .summary-item {
             background: #f8fafc;
@@ -104,7 +91,6 @@
             text-align: center;
         }
 
-
         .summary-item strong {
             display: block;
             font-size: 28px;
@@ -112,12 +98,10 @@
             margin-bottom: 8px;
         }
 
-
         .summary-item span {
             color: #6b7280;
             font-size: 14px;
         }
-
 
         .score-container {
             display: grid;
@@ -125,7 +109,6 @@
             gap: 25px;
             margin-bottom: 30px;
         }
-
 
         .score-card {
             background: white;
@@ -135,11 +118,9 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
         }
 
-
         .score-card h2 {
             margin-bottom: 10px;
         }
-
 
         .score {
             font-size: 60px;
@@ -148,11 +129,9 @@
             margin: 15px 0;
         }
 
-
         .score-label {
             color: #6b7280;
         }
-
 
         .score-status {
             margin-top: 10px;
@@ -160,32 +139,53 @@
             font-size: 16px;
         }
 
+        /* SKILL MATCH VISUALIZATION */
+
+        .skill-match-wrapper {
+            margin-top: 25px;
+            text-align: left;
+        }
+
+        .skill-match-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .skill-match-percentage {
+            color: #2563eb;
+        }
 
         .progress-container {
             width: 100%;
-            height: 18px;
+            height: 22px;
             background: #e5e7eb;
             border-radius: 20px;
             overflow: hidden;
-            margin-top: 20px;
         }
-
 
         .progress-bar {
             height: 100%;
             width: 0%;
             background: #2563eb;
             border-radius: 20px;
-            transition: width 0.8s ease;
+            transition: width 1.2s ease;
         }
 
+        .progress-message {
+            margin-top: 12px;
+            text-align: center;
+            color: #6b7280;
+            font-size: 14px;
+        }
 
         .grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 25px;
         }
-
 
         .card {
             background: white;
@@ -194,30 +194,25 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
         }
 
-
         .card h2 {
             margin-bottom: 20px;
             font-size: 22px;
         }
 
-
         .card ul {
             padding-left: 20px;
         }
-
 
         .card li {
             margin-bottom: 12px;
             line-height: 1.6;
         }
 
-
         .skills {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
-
 
         .skill {
             background: #dbeafe;
@@ -227,7 +222,6 @@
             font-size: 14px;
         }
 
-
         .missing-skill {
             background: #fee2e2;
             color: #b91c1c;
@@ -236,11 +230,9 @@
             font-size: 14px;
         }
 
-
         .empty-message {
             color: #6b7280;
         }
-
 
         .buttons {
             display: flex;
@@ -249,7 +241,6 @@
             margin: 40px auto;
             flex-wrap: wrap;
         }
-
 
         .back-button {
             display: block;
@@ -263,21 +254,17 @@
             font-weight: bold;
         }
 
-
         .back-button:hover {
             background: #1d4ed8;
         }
-
 
         .home-button {
             background: #111827;
         }
 
-
         .home-button:hover {
             background: #374151;
         }
-
 
         footer {
             margin-top: 50px;
@@ -287,12 +274,10 @@
             color: white;
         }
 
-
         footer p + p {
             margin-top: 8px;
             color: #9ca3af;
         }
-
 
         @media (max-width: 850px) {
 
@@ -302,28 +287,23 @@
 
         }
 
-
         @media (max-width: 750px) {
 
             .score-container {
                 grid-template-columns: 1fr;
             }
 
-
             .grid {
                 grid-template-columns: 1fr;
             }
-
 
             .summary-grid {
                 grid-template-columns: 1fr;
             }
 
-
             .header-section h1 {
                 font-size: 30px;
             }
-
 
             .score {
                 font-size: 50px;
@@ -359,12 +339,10 @@
                 Resume Analysis
             </h1>
 
-
             <p>
                 Resume:
                 <strong>{{ resume_name }}</strong>
             </p>
-
 
             {% if analysis.detected_job %}
 
@@ -388,9 +366,7 @@
                 📋 Analysis Summary
             </h2>
 
-
             <div class="summary-grid">
-
 
                 <div class="summary-item">
 
@@ -443,7 +419,6 @@
 
                 </div>
 
-
             </div>
 
         </div>
@@ -462,18 +437,15 @@
                     📊 Overall Resume Score
                 </h2>
 
-
                 <div class="score">
                     {{ analysis.resume_score }}%
                 </div>
-
 
                 <p
                     class="score-status"
                     id="scoreStatus"
                 >
                 </p>
-
 
                 <p class="score-label">
 
@@ -493,11 +465,9 @@
                     🎯 Skill Match
                 </h2>
 
-
                 <div class="score">
                     {{ analysis.skill_match }}%
                 </div>
-
 
                 <p class="score-label">
 
@@ -507,12 +477,38 @@
                 </p>
 
 
-                <div class="progress-container">
+                <div class="skill-match-wrapper">
 
-                    <div
-                        class="progress-bar"
-                        data-score="{{ analysis.skill_match }}"
-                    ></div>
+                    <div class="skill-match-header">
+
+                        <span>
+                            Skill Compatibility
+                        </span>
+
+                        <span
+                            class="skill-match-percentage"
+                        >
+                            {{ analysis.skill_match }}%
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress-container">
+
+                        <div
+                            class="progress-bar"
+                            data-score="{{ analysis.skill_match }}"
+                        ></div>
+
+                    </div>
+
+
+                    <p
+                        class="progress-message"
+                        id="progressMessage"
+                    >
+                    </p>
 
                 </div>
 
@@ -535,7 +531,6 @@
                     🛠️ Skills Found
                 </h2>
 
-
                 {% if analysis.skills %}
 
                     <div class="skills">
@@ -553,9 +548,7 @@
                 {% else %}
 
                     <p class="empty-message">
-
                         No matching skills found.
-
                     </p>
 
                 {% endif %}
@@ -570,7 +563,6 @@
                 <h2>
                     📋 Required Skills
                 </h2>
-
 
                 {% if analysis.required_skills %}
 
@@ -589,10 +581,8 @@
                 {% else %}
 
                     <p class="empty-message">
-
                         No recognized skills found
                         in the job description.
-
                     </p>
 
                 {% endif %}
@@ -607,7 +597,6 @@
                 <h2>
                     💪 Strengths
                 </h2>
-
 
                 {% if analysis.strengths %}
 
@@ -626,9 +615,7 @@
                 {% else %}
 
                     <p class="empty-message">
-
                         No strengths identified.
-
                     </p>
 
                 {% endif %}
@@ -643,7 +630,6 @@
                 <h2>
                     ⚠️ Weaknesses
                 </h2>
-
 
                 {% if analysis.weaknesses %}
 
@@ -662,9 +648,7 @@
                 {% else %}
 
                     <p class="empty-message">
-
                         No major weaknesses identified.
-
                     </p>
 
                 {% endif %}
@@ -679,7 +663,6 @@
                 <h2>
                     🎯 Missing Skills
                 </h2>
-
 
                 {% if analysis.missing_skills %}
 
@@ -698,9 +681,7 @@
                 {% else %}
 
                     <p class="empty-message">
-
                         No major missing skills identified.
-
                     </p>
 
                 {% endif %}
@@ -715,7 +696,6 @@
                 <h2>
                     💡 Recommendations
                 </h2>
-
 
                 {% if analysis.recommendations %}
 
@@ -734,9 +714,7 @@
                 {% else %}
 
                     <p class="empty-message">
-
                         No recommendations available.
-
                     </p>
 
                 {% endif %}
@@ -751,7 +729,6 @@
 
         <div class="buttons">
 
-
             <a
                 href="/"
                 class="back-button"
@@ -759,14 +736,12 @@
                 Analyze Another Resume
             </a>
 
-
             <a
                 href="/"
                 class="back-button home-button"
             >
                 Back to Home
             </a>
-
 
         </div>
 
@@ -782,15 +757,12 @@
             © 2026 ResumeAI
         </p>
 
-
         <p>
             AI-Powered Resume Analysis & Job Matching
         </p>
 
     </footer>
 
-
-    <!-- JAVASCRIPT -->
 
     <script>
 
@@ -809,8 +781,45 @@
                 );
 
 
-            progressBar.style.width =
-                score + "%";
+            setTimeout(function () {
+
+                progressBar.style.width =
+                    score + "%";
+
+            }, 200);
+
+
+            const progressMessage =
+                document.getElementById(
+                    "progressMessage"
+                );
+
+
+            if (progressMessage) {
+
+                if (score >= 80) {
+
+                    progressMessage.innerText =
+                        "Excellent skill compatibility";
+
+                } else if (score >= 60) {
+
+                    progressMessage.innerText =
+                        "Good skill compatibility";
+
+                } else if (score >= 40) {
+
+                    progressMessage.innerText =
+                        "Moderate skill compatibility";
+
+                } else {
+
+                    progressMessage.innerText =
+                        "Low skill compatibility";
+
+                }
+
+            }
 
         }
 
@@ -831,24 +840,20 @@
 
         if (scoreStatus) {
 
-
             if (resumeScore >= 80) {
 
                 scoreStatus.innerText =
                     "🌟 Excellent Resume Match";
-
 
             } else if (resumeScore >= 60) {
 
                 scoreStatus.innerText =
                     "👍 Good Resume Match";
 
-
             } else if (resumeScore >= 40) {
 
                 scoreStatus.innerText =
                     "⚠️ Needs Improvement";
-
 
             } else {
 
