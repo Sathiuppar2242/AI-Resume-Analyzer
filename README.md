@@ -166,13 +166,11 @@ AI-Resume-Analyzer/
 │
 ├── uploads/
 │
-├── .gitignore
+├── ├── .gitignore
 ├── requirements.txt
 └── README.md
 
 The uploads folder is used locally to temporarily store uploaded resumes.
-
-Uploaded resumes are ignored by Git and are not included in the GitHub repository.
 
 Installation
 1. Clone the repository
