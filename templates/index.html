@@ -132,6 +132,26 @@
             font-size: 13px;
         }
 
+        .file-preview {
+            display: none;
+            margin-top: 12px;
+            padding: 14px 16px;
+            background: #f8fafc;
+            border: 1px solid #dbeafe;
+            border-radius: 10px;
+        }
+
+        .file-preview-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 5px;
+        }
+
+        .file-preview-details {
+            color: #6b7280;
+            font-size: 13px;
+        }
+
     </style>
 
 </head>
@@ -277,6 +297,29 @@
                 <small class="file-info">
                     Accepted formats: PDF, DOCX | Maximum size: 5 MB
                 </small>
+
+
+                <div
+                    id="filePreview"
+                    class="file-preview"
+                >
+
+                    <div class="file-preview-title">
+                        📄 Selected Resume
+                    </div>
+
+                    <div
+                        id="fileName"
+                        class="file-preview-details"
+                    ></div>
+
+                    <div
+                        id="fileSize"
+                        class="file-preview-details"
+                    ></div>
+
+                </div>
+
 
                 <div
                     id="fileError"
@@ -480,6 +523,15 @@ Responsibilities:
         const fileError =
             document.getElementById("fileError");
 
+        const filePreview =
+            document.getElementById("filePreview");
+
+        const fileName =
+            document.getElementById("fileName");
+
+        const fileSize =
+            document.getElementById("fileSize");
+
         const jobDescription =
             document.getElementById("job_description");
 
@@ -517,6 +569,8 @@ Responsibilities:
 
                 fileError.innerText = "";
 
+                filePreview.style.display = "none";
+
 
                 const file =
                     resumeInput.files[0];
@@ -555,6 +609,22 @@ Responsibilities:
                     return;
 
                 }
+
+
+                const sizeInMB =
+                    (file.size / (1024 * 1024)).toFixed(2);
+
+
+                fileName.innerText =
+                    "Name: " + file.name;
+
+
+                fileSize.innerText =
+                    "Size: " + sizeInMB + " MB";
+
+
+                filePreview.style.display =
+                    "block";
 
             }
         );
@@ -582,7 +652,8 @@ Responsibilities:
                     fileError.innerText =
                         "⚠️ Invalid file type. Please upload a PDF or DOCX file.";
 
-                    fileError.style.display = "block";
+                    fileError.style.display =
+                        "block";
 
                     return;
 
@@ -596,7 +667,8 @@ Responsibilities:
                     fileError.innerText =
                         "⚠️ File is too large. Please select a file smaller than 5 MB.";
 
-                    fileError.style.display = "block";
+                    fileError.style.display =
+                        "block";
 
                     return;
 
