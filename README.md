@@ -323,3 +323,13 @@ Conclusion
 ResumeAI demonstrates how Python, Flask, resume processing, skill matching, and web technologies can be combined to build a practical AI-based career assistance application.
 
 The project can be further extended into a complete AI-powered career platform with resume optimization, job recommendations, ATS analysis, and personalized career suggestions.
+
+## Future Enhancements
+
+The project can be extended with the following features:
+
+- AI-powered resume improvement suggestions
+- Job description matching and recommendation
+- Resume keyword optimization for ATS systems
+- Support for additional resume file formats
+- User-friendly analysis history and report management
