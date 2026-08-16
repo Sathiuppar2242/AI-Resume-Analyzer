@@ -11,11 +11,18 @@ from services.ai_analyzer import analyze_resume
 
 app = Flask(__name__)
 
+
+# Upload configuration
+
 UPLOAD_FOLDER = "uploads"
 
 ALLOWED_EXTENSIONS = {"pdf", "docx"}
 
+MAX_FILE_SIZE = 5 * 1024 * 1024  # 5 MB
+
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
+app.config["MAX_CONTENT_LENGTH"] = MAX_FILE_SIZE
+
 
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
@@ -26,6 +33,15 @@ def allowed_file(filename):
         "." in filename
         and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
     )
+
+
+@app.errorhandler(413)
+def request_entity_too_large(error):
+
+    return render_template(
+        "index.html",
+        error="File is too large. Please upload a resume smaller than 5 MB."
+    ), 413
 
 
 @app.route("/")
@@ -62,6 +78,23 @@ def analyze():
         return render_template(
             "index.html",
             error="Invalid file type. Please upload a PDF or DOCX file."
+        )
+
+
+    # File size validation
+
+    resume.seek(0, os.SEEK_END)
+
+    file_size = resume.tell()
+
+    resume.seek(0)
+
+
+    if file_size > MAX_FILE_SIZE:
+
+        return render_template(
+            "index.html",
+            error="File is too large. Please upload a resume smaller than 5 MB."
         )
 
 
