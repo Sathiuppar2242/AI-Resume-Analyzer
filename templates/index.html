@@ -113,6 +113,25 @@
             font-size: 13px;
         }
 
+        .file-error {
+            display: none;
+            margin-top: 10px;
+            padding: 10px 14px;
+            background: #fff1f2;
+            border: 1px solid #fecdd3;
+            color: #be123c;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .file-info {
+            display: block;
+            margin-top: 8px;
+            color: #6b7280;
+            font-size: 13px;
+        }
+
     </style>
 
 </head>
@@ -255,9 +274,14 @@
                     required
                 >
 
-                <small>
-                    Accepted formats: PDF, DOCX
+                <small class="file-info">
+                    Accepted formats: PDF, DOCX | Maximum size: 5 MB
                 </small>
+
+                <div
+                    id="fileError"
+                    class="file-error"
+                ></div>
 
             </div>
 
@@ -441,21 +465,6 @@ Responsibilities:
 
     <script>
 
-        const jobDescription =
-            document.getElementById("job_description");
-
-        const jobDescriptionCounter =
-            document.getElementById("jobDescriptionCounter");
-
-
-        jobDescription.addEventListener("input", function () {
-
-            jobDescriptionCounter.innerText =
-                "Characters: " + jobDescription.value.length;
-
-        });
-
-
         const form =
             document.getElementById("resumeForm");
 
@@ -465,17 +474,146 @@ Responsibilities:
         const analyzeButton =
             document.getElementById("analyzeButton");
 
+        const resumeInput =
+            document.getElementById("resume");
 
-        form.addEventListener("submit", function () {
+        const fileError =
+            document.getElementById("fileError");
 
-            loadingOverlay.style.display = "flex";
+        const jobDescription =
+            document.getElementById("job_description");
 
-            analyzeButton.disabled = true;
+        const jobDescriptionCounter =
+            document.getElementById("jobDescriptionCounter");
 
-            analyzeButton.innerText =
-                "Analyzing Resume...";
 
-        });
+        const MAX_FILE_SIZE =
+            5 * 1024 * 1024;
+
+
+        const ALLOWED_FILE_TYPES = [
+            "application/pdf",
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        ];
+
+
+        jobDescription.addEventListener(
+            "input",
+            function () {
+
+                jobDescriptionCounter.innerText =
+                    "Characters: " +
+                    jobDescription.value.length;
+
+            }
+        );
+
+
+        resumeInput.addEventListener(
+            "change",
+            function () {
+
+                fileError.style.display = "none";
+
+                fileError.innerText = "";
+
+
+                const file =
+                    resumeInput.files[0];
+
+
+                if (!file) {
+
+                    return;
+
+                }
+
+
+                if (!ALLOWED_FILE_TYPES.includes(file.type)) {
+
+                    fileError.innerText =
+                        "⚠️ Invalid file type. Please upload a PDF or DOCX file.";
+
+                    fileError.style.display = "block";
+
+                    resumeInput.value = "";
+
+                    return;
+
+                }
+
+
+                if (file.size > MAX_FILE_SIZE) {
+
+                    fileError.innerText =
+                        "⚠️ File is too large. Please select a file smaller than 5 MB.";
+
+                    fileError.style.display = "block";
+
+                    resumeInput.value = "";
+
+                    return;
+
+                }
+
+            }
+        );
+
+
+        form.addEventListener(
+            "submit",
+            function (event) {
+
+                const file =
+                    resumeInput.files[0];
+
+
+                if (!file) {
+
+                    return;
+
+                }
+
+
+                if (!ALLOWED_FILE_TYPES.includes(file.type)) {
+
+                    event.preventDefault();
+
+                    fileError.innerText =
+                        "⚠️ Invalid file type. Please upload a PDF or DOCX file.";
+
+                    fileError.style.display = "block";
+
+                    return;
+
+                }
+
+
+                if (file.size > MAX_FILE_SIZE) {
+
+                    event.preventDefault();
+
+                    fileError.innerText =
+                        "⚠️ File is too large. Please select a file smaller than 5 MB.";
+
+                    fileError.style.display = "block";
+
+                    return;
+
+                }
+
+
+                loadingOverlay.style.display =
+                    "flex";
+
+                analyzeButton.disabled =
+                    true;
+
+                analyzeButton.innerText =
+                    "Analyzing Resume...";
+
+            }
+        );
 
 
         function closeError() {
@@ -485,7 +623,8 @@ Responsibilities:
 
             if (errorMessage) {
 
-                errorMessage.style.display = "none";
+                errorMessage.style.display =
+                    "none";
 
             }
 
