@@ -5,7 +5,10 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>ResumeAI - AI-Powered Resume Analyzer</title>
 
@@ -100,6 +103,14 @@
 
         .close-error:hover {
             color: #881337;
+        }
+
+        .character-counter {
+            display: block;
+            margin-top: 8px;
+            text-align: right;
+            color: #6b7280;
+            font-size: 13px;
         }
 
     </style>
@@ -285,6 +296,13 @@ Responsibilities:
                     required
                 ></textarea>
 
+                <small
+                    id="jobDescriptionCounter"
+                    class="character-counter"
+                >
+                    Characters: 0
+                </small>
+
             </div>
 
 
@@ -422,6 +440,21 @@ Responsibilities:
 
 
     <script>
+
+        const jobDescription =
+            document.getElementById("job_description");
+
+        const jobDescriptionCounter =
+            document.getElementById("jobDescriptionCounter");
+
+
+        jobDescription.addEventListener("input", function () {
+
+            jobDescriptionCounter.innerText =
+                "Characters: " + jobDescription.value.length;
+
+        });
+
 
         const form =
             document.getElementById("resumeForm");
