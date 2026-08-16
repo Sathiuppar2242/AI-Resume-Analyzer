@@ -152,6 +152,29 @@
             font-size: 13px;
         }
 
+        .form-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .clear-button {
+            border: 1px solid #d1d5db;
+            background: #f9fafb;
+            color: #374151;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .clear-button:hover {
+            background: #e5e7eb;
+        }
+
     </style>
 
 </head>
@@ -373,14 +396,29 @@ Responsibilities:
             </div>
 
 
-            <button
-                type="submit"
-                id="analyzeButton"
-            >
+            <div class="form-actions">
 
-                🤖 Analyze Resume
+                <button
+                    type="submit"
+                    id="analyzeButton"
+                >
 
-            </button>
+                    🤖 Analyze Resume
+
+                </button>
+
+
+                <button
+                    type="button"
+                    id="clearButton"
+                    class="clear-button"
+                >
+
+                    🗑️ Clear Form
+
+                </button>
+
+            </div>
 
 
         </form>
@@ -517,6 +555,9 @@ Responsibilities:
         const analyzeButton =
             document.getElementById("analyzeButton");
 
+        const clearButton =
+            document.getElementById("clearButton");
+
         const resumeInput =
             document.getElementById("resume");
 
@@ -565,11 +606,14 @@ Responsibilities:
             "change",
             function () {
 
-                fileError.style.display = "none";
+                fileError.style.display =
+                    "none";
 
-                fileError.innerText = "";
+                fileError.innerText =
+                    "";
 
-                filePreview.style.display = "none";
+                filePreview.style.display =
+                    "none";
 
 
                 const file =
@@ -588,9 +632,11 @@ Responsibilities:
                     fileError.innerText =
                         "⚠️ Invalid file type. Please upload a PDF or DOCX file.";
 
-                    fileError.style.display = "block";
+                    fileError.style.display =
+                        "block";
 
-                    resumeInput.value = "";
+                    resumeInput.value =
+                        "";
 
                     return;
 
@@ -602,9 +648,11 @@ Responsibilities:
                     fileError.innerText =
                         "⚠️ File is too large. Please select a file smaller than 5 MB.";
 
-                    fileError.style.display = "block";
+                    fileError.style.display =
+                        "block";
 
-                    resumeInput.value = "";
+                    resumeInput.value =
+                        "";
 
                     return;
 
@@ -683,6 +731,37 @@ Responsibilities:
 
                 analyzeButton.innerText =
                     "Analyzing Resume...";
+
+            }
+        );
+
+
+        clearButton.addEventListener(
+            "click",
+            function () {
+
+                form.reset();
+
+                jobDescriptionCounter.innerText =
+                    "Characters: 0";
+
+                filePreview.style.display =
+                    "none";
+
+                fileError.style.display =
+                    "none";
+
+                fileError.innerText =
+                    "";
+
+                loadingOverlay.style.display =
+                    "none";
+
+                analyzeButton.disabled =
+                    false;
+
+                analyzeButton.innerText =
+                    "🤖 Analyze Resume";
 
             }
         );
