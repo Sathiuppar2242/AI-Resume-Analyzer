@@ -12,26 +12,28 @@ from services.ai_analyzer import analyze_resume
 app = Flask(__name__)
 
 
-# Upload configuration
-
 UPLOAD_FOLDER = "uploads"
 
 ALLOWED_EXTENSIONS = {"pdf", "docx"}
 
-MAX_FILE_SIZE = 5 * 1024 * 1024  # 5 MB
+MAX_FILE_SIZE = 5 * 1024 * 1024
 
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 app.config["MAX_CONTENT_LENGTH"] = MAX_FILE_SIZE
 
 
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+os.makedirs(
+    UPLOAD_FOLDER,
+    exist_ok=True
+)
 
 
 def allowed_file(filename):
 
     return (
         "." in filename
-        and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
+        and filename.rsplit(".", 1)[1].lower()
+        in ALLOWED_EXTENSIONS
     )
 
 
@@ -40,20 +42,27 @@ def request_entity_too_large(error):
 
     return render_template(
         "index.html",
-        error="File is too large. Please upload a resume smaller than 5 MB."
+        error="The uploaded resume is too large. Please upload a file smaller than 5 MB."
     ), 413
 
 
 @app.route("/")
 def home():
 
-    return render_template("index.html")
+    return render_template(
+        "index.html"
+    )
 
 
-@app.route("/analyze", methods=["POST"])
+@app.route(
+    "/analyze",
+    methods=["POST"]
+)
 def analyze():
 
-    resume = request.files.get("resume")
+    resume = request.files.get(
+        "resume"
+    )
 
     job_description = request.form.get(
         "job_description",
@@ -73,7 +82,9 @@ def analyze():
 
     # File type validation
 
-    if not allowed_file(resume.filename):
+    if not allowed_file(
+        resume.filename
+    ):
 
         return render_template(
             "index.html",
@@ -94,7 +105,7 @@ def analyze():
 
         return render_template(
             "index.html",
-            error="File is too large. Please upload a resume smaller than 5 MB."
+            error="Resume file is too large. Please upload a file smaller than 5 MB."
         )
 
 
@@ -108,6 +119,14 @@ def analyze():
         )
 
 
+    if len(job_description) < 100:
+
+        return render_template(
+            "index.html",
+            error="The job description is too short. Please provide at least 100 characters."
+        )
+
+
     # Save uploaded resume
 
     filename = resume.filename
@@ -117,14 +136,30 @@ def analyze():
         filename
     )
 
-    resume.save(filepath)
-
 
     try:
 
+        resume.save(
+            filepath
+        )
+
+
         # Extract resume text
 
-        resume_text = extract_resume_text(filepath)
+        resume_text = extract_resume_text(
+            filepath
+        )
+
+
+        if not resume_text or not resume_text.strip():
+
+            return render_template(
+                "index.html",
+                error=(
+                    "We couldn't extract readable text from your resume. "
+                    "Please upload a valid PDF or DOCX file."
+                )
+            )
 
 
         # AI analysis
@@ -133,6 +168,17 @@ def analyze():
             resume_text,
             job_description
         )
+
+
+        if not analysis:
+
+            return render_template(
+                "index.html",
+                error=(
+                    "Resume analysis could not be completed. "
+                    "Please try again with a valid resume and job description."
+                )
+            )
 
 
         return render_template(
@@ -144,13 +190,41 @@ def analyze():
 
     except Exception as e:
 
-        return render_template(
-            "index.html",
-            error=f"Error analyzing resume: {str(e)}"
+        print(
+            f"Analysis error: {type(e).__name__}: {str(e)}"
         )
 
 
-@app.route("/download-report", methods=["POST"])
+        return render_template(
+            "index.html",
+            error=(
+                "We couldn't complete the resume analysis right now. "
+                "Please check your resume and job description and try again."
+            )
+        )
+
+
+    finally:
+
+        if os.path.exists(
+            filepath
+        ):
+
+            try:
+
+                os.remove(
+                    filepath
+                )
+
+            except OSError:
+
+                pass
+
+
+@app.route(
+    "/download-report",
+    methods=["POST"]
+)
 def download_report():
 
     resume_name = request.form.get(
@@ -291,9 +365,13 @@ def download_report():
 
     # Helper function
 
-    def add_section(title, content):
+    def add_section(
+        title,
+        content
+    ):
 
         nonlocal y
+
 
         if y < 100:
 
@@ -337,6 +415,7 @@ def download_report():
 
 
             if not item:
+
                 continue
 
 
@@ -427,4 +506,6 @@ def download_report():
 
 if __name__ == "__main__":
 
-    app.run(debug=True)
+    app.run(
+        debug=True
+    )
