@@ -113,6 +113,16 @@
             font-size: 13px;
         }
 
+        .character-counter.warning {
+            color: #dc2626;
+            font-weight: 600;
+        }
+
+        .character-counter.valid {
+            color: #15803d;
+            font-weight: 600;
+        }
+
         .file-error {
             display: none;
             margin-top: 10px;
@@ -159,6 +169,18 @@
             background: #f0fdf4;
             border: 1px solid #bbf7d0;
             color: #15803d;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .job-description-error {
+            display: none;
+            margin-top: 10px;
+            padding: 10px 14px;
+            background: #fff1f2;
+            border: 1px solid #fecdd3;
+            color: #be123c;
             border-radius: 8px;
             font-size: 14px;
             font-weight: 600;
@@ -406,12 +428,19 @@ Responsibilities:
                     required
                 ></textarea>
 
+
                 <small
                     id="jobDescriptionCounter"
                     class="character-counter"
                 >
-                    Characters: 0
+                    Characters: 0 / 100 minimum
                 </small>
+
+
+                <div
+                    id="jobDescriptionError"
+                    class="job-description-error"
+                ></div>
 
             </div>
 
@@ -602,9 +631,16 @@ Responsibilities:
         const jobDescriptionCounter =
             document.getElementById("jobDescriptionCounter");
 
+        const jobDescriptionError =
+            document.getElementById("jobDescriptionError");
+
 
         const MAX_FILE_SIZE =
             5 * 1024 * 1024;
+
+
+        const MIN_JOB_DESCRIPTION_LENGTH =
+            100;
 
 
         const ALLOWED_FILE_TYPES = [
@@ -617,9 +653,55 @@ Responsibilities:
             "input",
             function () {
 
+                const length =
+                    jobDescription.value.trim().length;
+
+
                 jobDescriptionCounter.innerText =
                     "Characters: " +
-                    jobDescription.value.length;
+                    length +
+                    " / 100 minimum";
+
+
+                if (length === 0) {
+
+                    jobDescriptionCounter.classList.remove(
+                        "warning",
+                        "valid"
+                    );
+
+                }
+                else if (
+                    length < MIN_JOB_DESCRIPTION_LENGTH
+                ) {
+
+                    jobDescriptionCounter.classList.add(
+                        "warning"
+                    );
+
+                    jobDescriptionCounter.classList.remove(
+                        "valid"
+                    );
+
+                }
+                else {
+
+                    jobDescriptionCounter.classList.add(
+                        "valid"
+                    );
+
+                    jobDescriptionCounter.classList.remove(
+                        "warning"
+                    );
+
+                }
+
+
+                jobDescriptionError.style.display =
+                    "none";
+
+                jobDescriptionError.innerText =
+                    "";
 
             }
         );
@@ -716,6 +798,10 @@ Responsibilities:
                     resumeInput.files[0];
 
 
+                const jobText =
+                    jobDescription.value.trim();
+
+
                 if (!file) {
 
                     return;
@@ -753,6 +839,23 @@ Responsibilities:
                 }
 
 
+                if (jobText.length < MIN_JOB_DESCRIPTION_LENGTH) {
+
+                    event.preventDefault();
+
+                    jobDescriptionError.innerText =
+                        "⚠️ Job description is too short. Please provide at least 100 characters.";
+
+                    jobDescriptionError.style.display =
+                        "block";
+
+                    jobDescription.focus();
+
+                    return;
+
+                }
+
+
                 loadingOverlay.style.display =
                     "flex";
 
@@ -773,7 +876,18 @@ Responsibilities:
                 form.reset();
 
                 jobDescriptionCounter.innerText =
-                    "Characters: 0";
+                    "Characters: 0 / 100 minimum";
+
+                jobDescriptionCounter.classList.remove(
+                    "warning",
+                    "valid"
+                );
+
+                jobDescriptionError.style.display =
+                    "none";
+
+                jobDescriptionError.innerText =
+                    "";
 
                 filePreview.style.display =
                     "none";
