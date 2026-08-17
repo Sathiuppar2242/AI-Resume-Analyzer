@@ -152,6 +152,18 @@
             font-size: 13px;
         }
 
+        .file-success {
+            display: none;
+            margin-top: 10px;
+            padding: 10px 14px;
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            color: #15803d;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
         .form-actions {
             display: flex;
             gap: 12px;
@@ -341,6 +353,14 @@
                         class="file-preview-details"
                     ></div>
 
+                </div>
+
+
+                <div
+                    id="fileSuccess"
+                    class="file-success"
+                >
+                    ✅ Resume selected successfully.
                 </div>
 
 
@@ -567,6 +587,9 @@ Responsibilities:
         const filePreview =
             document.getElementById("filePreview");
 
+        const fileSuccess =
+            document.getElementById("fileSuccess");
+
         const fileName =
             document.getElementById("fileName");
 
@@ -611,6 +634,9 @@ Responsibilities:
 
                 fileError.innerText =
                     "";
+
+                fileSuccess.style.display =
+                    "none";
 
                 filePreview.style.display =
                     "none";
@@ -672,6 +698,10 @@ Responsibilities:
 
 
                 filePreview.style.display =
+                    "block";
+
+
+                fileSuccess.style.display =
                     "block";
 
             }
@@ -746,6 +776,9 @@ Responsibilities:
                     "Characters: 0";
 
                 filePreview.style.display =
+                    "none";
+
+                fileSuccess.style.display =
                     "none";
 
                 fileError.style.display =
