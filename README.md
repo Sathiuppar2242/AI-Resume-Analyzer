@@ -350,3 +350,14 @@ Key highlights:
 - Responsive web interface
 - Clear validation and error handling
 
+
+## Prerequisites
+
+Before running ResumeAI, make sure the following are installed:
+
+- Python 3.x
+- Git
+- VS Code or another code editor
+- A modern web browser
+- pip package manager
+
