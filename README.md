@@ -547,3 +547,34 @@ The development process included:
 
 Git was used throughout development to track changes and maintain different stages of the project.
 
+
+## Testing
+
+The application should be tested using different resume and job-description combinations.
+
+### Functional Tests
+
+- Upload a valid PDF resume
+- Upload a valid DOCX resume
+- Test an unsupported file format
+- Test an empty job description
+- Test an empty resume
+- Test different job roles
+- Verify matched skills
+- Verify missing skills
+- Verify resume score calculation
+- Verify the results page
+- Verify PDF report generation
+
+### Application Verification
+
+Before publishing changes, the application should be checked for:
+
+- Successful Flask startup
+- Correct resume processing
+- Correct skill matching
+- Correct score calculation
+- Proper error messages
+- Working PDF report download
+- Responsive user interface
+
