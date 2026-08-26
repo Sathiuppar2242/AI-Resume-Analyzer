@@ -488,3 +488,40 @@ For production deployment, additional security measures can be added, including:
 - Secure environment variables
 - HTTPS configuration
 
+
+## Example Analysis
+
+For a Python Developer position, suppose the job description requires:
+
+- Python
+- Flask
+- Django
+- SQL
+- Git
+- REST API
+
+If the uploaded resume contains:
+
+- Python
+- Flask
+- SQL
+- Git
+
+ResumeAI can identify:
+
+### Matched Skills
+
+- Python
+- Flask
+- SQL
+- Git
+
+### Missing Skills
+
+- Django
+- REST API
+
+The application then calculates the skill match percentage and provides an overall resume score along with strengths, weaknesses, and recommendations.
+
+This helps candidates quickly understand how closely their resume matches a specific job description.
+
