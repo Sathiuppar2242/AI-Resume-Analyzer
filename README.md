@@ -390,3 +390,41 @@ Recommendations
         ?
 PDF Report Generation
 
+
+## Analysis Metrics
+
+ResumeAI evaluates a resume using several important metrics:
+
+### Skill Match
+
+Measures how many of the skills required by the job description are present in the resume.
+
+### Resume Score
+
+Provides an overall score based on factors such as:
+
+- Skill match
+- Projects
+- Education
+- Experience or internship information
+
+### Matched Skills
+
+Lists the skills that are found both in the job requirements and the resume.
+
+### Missing Skills
+
+Identifies important skills mentioned in the job description but not found in the resume.
+
+### Strengths
+
+Highlights positive aspects of the resume based on the analysis.
+
+### Weaknesses
+
+Identifies areas where the resume may need improvement.
+
+### Recommendations
+
+Provides suggestions that can help the candidate improve the resume for the selected job role.
+
