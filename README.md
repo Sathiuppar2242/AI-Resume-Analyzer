@@ -333,3 +333,20 @@ The project can be extended with the following features:
 - Resume keyword optimization for ATS systems
 - Support for additional resume file formats
 - User-friendly analysis history and report management
+## Project Highlights
+
+ResumeAI is built to simplify the resume screening process by comparing a candidate's resume with a specific job description.
+
+Key highlights:
+
+- Automated resume analysis using Python and Flask
+- PDF and DOCX resume processing
+- Job-role and skill detection
+- Resume-to-job skill comparison
+- Missing skill identification
+- Overall resume scoring
+- Strengths and weaknesses analysis
+- Downloadable PDF analysis reports
+- Responsive web interface
+- Clear validation and error handling
+
