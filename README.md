@@ -578,3 +578,20 @@ Before publishing changes, the application should be checked for:
 - Working PDF report download
 - Responsive user interface
 
+
+## Project Benefits
+
+ResumeAI provides several practical benefits:
+
+- Saves time when comparing resumes with job descriptions
+- Helps identify missing technical skills
+- Provides a quick overview of resume-job compatibility
+- Helps candidates understand their resume strengths and weaknesses
+- Provides actionable improvement recommendations
+- Supports both PDF and DOCX resumes
+- Generates a downloadable analysis report
+- Provides a simple web-based user experience
+- Can be extended with advanced NLP and machine learning techniques
+
+The project demonstrates how web development, Python programming, document processing, and AI-based analysis can be combined to solve a practical career-related problem.
+
