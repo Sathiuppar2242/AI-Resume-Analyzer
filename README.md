@@ -361,3 +361,32 @@ Before running ResumeAI, make sure the following are installed:
 - A modern web browser
 - pip package manager
 
+
+## Application Workflow
+
+The ResumeAI analysis workflow can be summarized as:
+
+Resume Upload
+        ?
+File Validation
+        ?
+Resume Text Extraction
+        ?
+Job Description Analysis
+        ?
+Job Role Detection
+        ?
+Required Skill Extraction
+        ?
+Resume Skill Detection
+        ?
+Skill Comparison
+        ?
+Resume Score Calculation
+        ?
+Strengths & Weaknesses Analysis
+        ?
+Recommendations
+        ?
+PDF Report Generation
+
