@@ -595,3 +595,19 @@ ResumeAI provides several practical benefits:
 
 The project demonstrates how web development, Python programming, document processing, and AI-based analysis can be combined to solve a practical career-related problem.
 
+
+## Current Limitations
+
+The current version of ResumeAI has some limitations:
+
+- Skill matching primarily depends on predefined skill patterns
+- Advanced semantic understanding is limited
+- Resume quality beyond the available analysis factors may not be fully evaluated
+- Job-role detection may not cover every possible job title
+- The application currently focuses on resume-to-job-description matching
+- Authentication and user accounts are not currently implemented
+- Analysis history is not stored in a database
+- Production deployment configuration is not included in the current version
+
+These limitations provide opportunities for future improvements using NLP, machine learning, semantic similarity models, databases, and cloud deployment.
+
