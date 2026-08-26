@@ -428,3 +428,37 @@ Identifies areas where the resume may need improvement.
 
 Provides suggestions that can help the candidate improve the resume for the selected job role.
 
+
+## Technology Architecture
+
+ResumeAI uses a simple web application architecture:
+
+### Frontend Layer
+
+- HTML provides the page structure
+- CSS handles styling and responsive design
+- JavaScript provides interactive features
+- Jinja2 templates connect the frontend with Flask
+
+### Backend Layer
+
+- Flask handles HTTP requests and application routing
+- Python manages the application logic
+- Resume processing services extract text from uploaded files
+- AI analysis services compare resume content with job requirements
+
+### Analysis Layer
+
+The analysis process combines:
+
+- Resume text extraction
+- Job description processing
+- Skill detection
+- Skill comparison
+- Resume scoring
+- Recommendation generation
+
+### Reporting Layer
+
+The final analysis is presented on the results page and can also be exported as a downloadable PDF report.
+
