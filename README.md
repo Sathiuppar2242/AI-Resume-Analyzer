@@ -525,3 +525,25 @@ The application then calculates the skill match percentage and provides an overa
 
 This helps candidates quickly understand how closely their resume matches a specific job description.
 
+
+## Development Approach
+
+ResumeAI was developed incrementally using version control and continuous testing.
+
+The development process included:
+
+1. Creating the Flask application foundation
+2. Building the resume upload interface
+3. Implementing PDF and DOCX processing
+4. Adding job description analysis
+5. Implementing skill matching
+6. Adding resume scoring
+7. Creating the results interface
+8. Adding validation and error handling
+9. Implementing PDF report generation
+10. Improving the user interface
+11. Updating project documentation
+12. Testing and maintaining the application
+
+Git was used throughout development to track changes and maintain different stages of the project.
+
