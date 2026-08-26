@@ -462,3 +462,29 @@ The analysis process combines:
 
 The final analysis is presented on the results page and can also be exported as a downloadable PDF report.
 
+
+## Security and Validation
+
+ResumeAI includes basic validation measures to improve application reliability and prevent common upload-related issues.
+
+The application validates:
+
+- Allowed resume file formats
+- Empty or invalid filenames
+- Empty job descriptions
+- Resume processing errors
+- Analysis errors
+- Invalid user input
+
+Uploaded resumes are processed locally by the application during analysis.
+
+For production deployment, additional security measures can be added, including:
+
+- File size restrictions
+- Secure filename handling
+- Authentication and authorization
+- Malware scanning
+- Rate limiting
+- Secure environment variables
+- HTTPS configuration
+
