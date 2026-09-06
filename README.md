@@ -673,3 +673,11 @@ The AI Resume Analyzer is actively developed and improved with regular updates.
 - PDF/DOCX Resume Processing
 - Natural Language Processing
 - HTML, CSS, JavaScript
+
+## Project Features
+- Upload resumes in PDF or DOCX format
+- Detect relevant job roles
+- Extract skills from resumes
+- Calculate an overall resume score
+- Provide improvement suggestions
+- Display results through a user-friendly web interface
