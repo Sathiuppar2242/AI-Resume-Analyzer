@@ -663,3 +663,6 @@ Version control helps maintain a clear development history and makes it easier t
 ## License
 
 This project is developed for educational and portfolio purposes.
+
+## Project Status
+The AI Resume Analyzer is actively developed and improved with regular updates.
