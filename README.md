@@ -666,3 +666,10 @@ This project is developed for educational and portfolio purposes.
 
 ## Project Status
 The AI Resume Analyzer is actively developed and improved with regular updates.
+
+## Key Technologies
+- Python
+- Flask
+- PDF/DOCX Resume Processing
+- Natural Language Processing
+- HTML, CSS, JavaScript
