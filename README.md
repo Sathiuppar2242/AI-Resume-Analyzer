@@ -681,3 +681,9 @@ The AI Resume Analyzer is actively developed and improved with regular updates.
 - Calculate an overall resume score
 - Provide improvement suggestions
 - Display results through a user-friendly web interface
+
+## Future Improvements
+- Add more job-role categories
+- Improve resume scoring accuracy
+- Enhance skill extraction with advanced NLP models
+- Add downloadable resume analysis reports
