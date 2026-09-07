@@ -715,3 +715,10 @@ The AI Resume Analyzer is actively developed and improved with regular updates.
 3. Upload a PDF or DOCX resume
 4. Select or enter the target job role if required
 5. Review the resume score, detected skills, and improvement suggestions
+
+## Testing
+- Test resume uploads with PDF and DOCX files
+- Verify resume text extraction
+- Check skill and job-role detection
+- Validate resume scoring results
+- Confirm improvement suggestions are displayed correctly
