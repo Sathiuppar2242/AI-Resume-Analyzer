@@ -708,3 +708,10 @@ The AI Resume Analyzer is actively developed and improved with regular updates.
 3. Install the required dependencies
 4. Configure the required environment variables
 5. Run the Flask application locally
+
+## Usage
+1. Start the Flask application
+2. Open the application in your browser
+3. Upload a PDF or DOCX resume
+4. Select or enter the target job role if required
+5. Review the resume score, detected skills, and improvement suggestions
