@@ -687,3 +687,10 @@ The AI Resume Analyzer is actively developed and improved with regular updates.
 - Improve resume scoring accuracy
 - Enhance skill extraction with advanced NLP models
 - Add downloadable resume analysis reports
+
+## How It Works
+1. Upload your resume in PDF or DOCX format
+2. The application extracts the resume content
+3. Resume details and skills are analyzed
+4. A resume score and job-role insights are generated
+5. Improvement suggestions are displayed to the user
