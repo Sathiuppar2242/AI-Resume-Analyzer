@@ -722,3 +722,9 @@ The AI Resume Analyzer is actively developed and improved with regular updates.
 - Check skill and job-role detection
 - Validate resume scoring results
 - Confirm improvement suggestions are displayed correctly
+
+## Project Goals
+- Help users understand the strengths of their resumes
+- Identify missing or relevant skills
+- Provide actionable resume improvement suggestions
+- Make resume analysis simple and accessible through a web application
