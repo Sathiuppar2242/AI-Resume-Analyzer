@@ -694,3 +694,10 @@ The AI Resume Analyzer is actively developed and improved with regular updates.
 3. Resume details and skills are analyzed
 4. A resume score and job-role insights are generated
 5. Improvement suggestions are displayed to the user
+
+## Project Structure
+- app.py - Main Flask application
+- services/ - Resume analysis and processing logic
+- templates/ - HTML templates
+- static/ - CSS, JavaScript, and frontend assets
+- README.md - Project documentation
