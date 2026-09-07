@@ -701,3 +701,10 @@ The AI Resume Analyzer is actively developed and improved with regular updates.
 - templates/ - HTML templates
 - static/ - CSS, JavaScript, and frontend assets
 - README.md - Project documentation
+
+## Installation & Setup
+1. Clone the repository
+2. Create and activate a Python virtual environment
+3. Install the required dependencies
+4. Configure the required environment variables
+5. Run the Flask application locally
