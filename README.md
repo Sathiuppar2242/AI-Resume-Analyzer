@@ -734,3 +734,9 @@ The AI Resume Analyzer is actively developed and improved with regular updates.
 - Sensitive user information should not be exposed in application logs
 - Environment variables should be used for configuration secrets
 - Uploaded files should be validated before processing
+
+## Troubleshooting
+- Make sure all required Python dependencies are installed
+- Verify the Flask server is running before opening the application
+- Check that uploaded files use supported PDF or DOCX formats
+- Review application logs when resume processing fails
