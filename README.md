@@ -740,3 +740,9 @@ The AI Resume Analyzer is actively developed and improved with regular updates.
 - Verify the Flask server is running before opening the application
 - Check that uploaded files use supported PDF or DOCX formats
 - Review application logs when resume processing fails
+
+## Performance Considerations
+- Process resumes efficiently to reduce analysis time
+- Keep uploaded file sizes within reasonable limits
+- Reuse loaded resources where possible
+- Optimize text extraction for faster resume analysis
