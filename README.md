@@ -746,3 +746,9 @@ The AI Resume Analyzer is actively developed and improved with regular updates.
 - Keep uploaded file sizes within reasonable limits
 - Reuse loaded resources where possible
 - Optimize text extraction for faster resume analysis
+
+## Contributing
+- Keep changes focused and well documented
+- Test updates before committing
+- Follow the existing project structure and coding conventions
+- Use clear commit messages when contributing improvements
