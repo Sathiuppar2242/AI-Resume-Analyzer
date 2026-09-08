@@ -728,3 +728,9 @@ The AI Resume Analyzer is actively developed and improved with regular updates.
 - Identify missing or relevant skills
 - Provide actionable resume improvement suggestions
 - Make resume analysis simple and accessible through a web application
+
+## Security Notes
+- Resume files should be handled securely
+- Sensitive user information should not be exposed in application logs
+- Environment variables should be used for configuration secrets
+- Uploaded files should be validated before processing
