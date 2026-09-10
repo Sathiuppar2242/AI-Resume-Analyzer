@@ -764,3 +764,8 @@ The AI Resume Analyzer is actively developed and improved with regular updates.
 - Different resume formats may produce different extraction results
 - Resume scores are intended as guidance and should not be treated as professional hiring decisions
 - Skill detection may not identify every technology or qualification
+
+## Version
+Current version: 1.0.0
+
+The project is maintained with incremental documentation and feature improvements.
