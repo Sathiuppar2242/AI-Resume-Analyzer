@@ -752,3 +752,9 @@ The AI Resume Analyzer is actively developed and improved with regular updates.
 - Test updates before committing
 - Follow the existing project structure and coding conventions
 - Use clear commit messages when contributing improvements
+
+## Application Benefits
+- Helps identify strengths and weaknesses in a resume
+- Highlights relevant technical and professional skills
+- Provides practical suggestions for improving resume quality
+- Gives users a quick overview of resume readiness
