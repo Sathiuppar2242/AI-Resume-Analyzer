@@ -758,3 +758,9 @@ The AI Resume Analyzer is actively developed and improved with regular updates.
 - Highlights relevant technical and professional skills
 - Provides practical suggestions for improving resume quality
 - Gives users a quick overview of resume readiness
+
+## Limitations
+- Resume analysis depends on the quality and completeness of uploaded content
+- Different resume formats may produce different extraction results
+- Resume scores are intended as guidance and should not be treated as professional hiring decisions
+- Skill detection may not identify every technology or qualification
