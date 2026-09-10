@@ -769,3 +769,9 @@ The AI Resume Analyzer is actively developed and improved with regular updates.
 Current version: 1.0.0
 
 The project is maintained with incremental documentation and feature improvements.
+
+## Development Roadmap
+- Improve resume parsing for additional document formats
+- Expand job-role and skill analysis capabilities
+- Enhance the user interface and analysis results
+- Add more automated testing and validation
