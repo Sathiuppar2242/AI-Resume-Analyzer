@@ -795,3 +795,9 @@ The project is maintained with incremental documentation and feature improvement
 4. Skills and potential job roles are identified
 5. The application generates a resume score
 6. Improvement recommendations are presented to the user
+
+## Privacy Considerations
+- Resume documents may contain sensitive personal information
+- Avoid storing uploaded resumes longer than necessary
+- Do not expose resume content in public logs or error messages
+- Keep application configuration and secrets outside the source code
