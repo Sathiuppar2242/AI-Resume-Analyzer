@@ -775,3 +775,9 @@ The project is maintained with incremental documentation and feature improvement
 - Expand job-role and skill analysis capabilities
 - Enhance the user interface and analysis results
 - Add more automated testing and validation
+
+## Supported File Formats
+- PDF resumes are supported for text extraction and analysis
+- DOCX resumes are supported for content processing
+- Uploaded files should contain readable resume content
+- Unsupported file formats should be rejected by the application
