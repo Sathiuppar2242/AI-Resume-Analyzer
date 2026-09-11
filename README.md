@@ -781,3 +781,9 @@ The project is maintained with incremental documentation and feature improvement
 - DOCX resumes are supported for content processing
 - Uploaded files should contain readable resume content
 - Unsupported file formats should be rejected by the application
+
+## Analysis Output
+- Resume score provides an overall assessment of the uploaded resume
+- Detected skills help identify relevant technical capabilities
+- Job-role insights help connect resume content with potential roles
+- Improvement suggestions highlight areas that can be strengthened
