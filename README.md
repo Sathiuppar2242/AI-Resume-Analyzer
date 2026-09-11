@@ -787,3 +787,11 @@ The project is maintained with incremental documentation and feature improvement
 - Detected skills help identify relevant technical capabilities
 - Job-role insights help connect resume content with potential roles
 - Improvement suggestions highlight areas that can be strengthened
+
+## Resume Analysis Workflow
+1. User uploads a supported resume file
+2. The application reads and extracts resume text
+3. Extracted content is processed for relevant information
+4. Skills and potential job roles are identified
+5. The application generates a resume score
+6. Improvement recommendations are presented to the user
