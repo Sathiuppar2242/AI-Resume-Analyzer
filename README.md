@@ -813,3 +813,9 @@ The project is maintained with incremental documentation and feature improvement
 - Handle unsupported file formats gracefully
 - Provide clear feedback when resume content cannot be extracted
 - Prevent unexpected application errors from exposing internal details
+
+## Development Best Practices
+- Follow a clear project structure when adding new functionality
+- Use descriptive names for files, functions, and variables
+- Test changes before committing them
+- Keep commits focused on specific improvements
