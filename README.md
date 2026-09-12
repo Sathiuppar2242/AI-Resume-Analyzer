@@ -807,3 +807,9 @@ The project is maintained with incremental documentation and feature improvement
 - Review resume processing logic when dependencies change
 - Add or update test cases when new features are introduced
 - Keep project documentation synchronized with application changes
+
+## Error Handling
+- Validate uploaded resume files before processing
+- Handle unsupported file formats gracefully
+- Provide clear feedback when resume content cannot be extracted
+- Prevent unexpected application errors from exposing internal details
