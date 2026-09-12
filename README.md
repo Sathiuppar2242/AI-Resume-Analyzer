@@ -819,3 +819,9 @@ The project is maintained with incremental documentation and feature improvement
 - Use descriptive names for files, functions, and variables
 - Test changes before committing them
 - Keep commits focused on specific improvements
+
+## Project Maintenance Checklist
+- Verify the application after dependency updates
+- Review documentation when project features change
+- Check file-processing behavior after code modifications
+- Keep the repository organized and free from unnecessary files
