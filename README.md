@@ -801,3 +801,9 @@ The project is maintained with incremental documentation and feature improvement
 - Avoid storing uploaded resumes longer than necessary
 - Do not expose resume content in public logs or error messages
 - Keep application configuration and secrets outside the source code
+
+## Maintenance and Updates
+- Keep project dependencies updated regularly
+- Review resume processing logic when dependencies change
+- Add or update test cases when new features are introduced
+- Keep project documentation synchronized with application changes
