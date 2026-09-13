@@ -831,3 +831,9 @@ The project is maintained with incremental documentation and feature improvement
 - Install all dependencies from the project requirements file
 - Configure application settings securely for the deployment environment
 - Test resume upload and analysis functionality after deployment
+
+## Configuration
+- Store environment-specific settings separately from application code
+- Keep secret keys and credentials out of the repository
+- Review configuration values before running the application
+- Use appropriate settings for development and deployment environments
