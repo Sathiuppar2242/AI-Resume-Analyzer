@@ -825,3 +825,9 @@ The project is maintained with incremental documentation and feature improvement
 - Review documentation when project features change
 - Check file-processing behavior after code modifications
 - Keep the repository organized and free from unnecessary files
+
+## Deployment Notes
+- Configure the required Python environment before deployment
+- Install all dependencies from the project requirements file
+- Configure application settings securely for the deployment environment
+- Test resume upload and analysis functionality after deployment
