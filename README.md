@@ -843,3 +843,9 @@ The project is maintained with incremental documentation and feature improvement
 - Confirm that resume text is extracted correctly
 - Check that skills and job roles are identified from the uploaded content
 - Verify that the resume score and improvement suggestions are displayed correctly
+
+## User Experience
+- Provide a simple interface for uploading resume documents
+- Display analysis results in a clear and understandable format
+- Present detected skills and job roles in an organized way
+- Give actionable suggestions to help users improve their resumes
