@@ -837,3 +837,9 @@ The project is maintained with incremental documentation and feature improvement
 - Keep secret keys and credentials out of the repository
 - Review configuration values before running the application
 - Use appropriate settings for development and deployment environments
+
+## Testing Checklist
+- Verify that supported PDF and DOCX resumes can be uploaded
+- Confirm that resume text is extracted correctly
+- Check that skills and job roles are identified from the uploaded content
+- Verify that the resume score and improvement suggestions are displayed correctly
