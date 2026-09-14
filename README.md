@@ -867,3 +867,9 @@ The project is maintained with incremental documentation and feature improvement
 - Present detected skills in an organized format
 - Show relevant job-role insights based on resume content
 - Display improvement suggestions in a user-friendly manner
+
+## Project Quality Standards
+- Keep application code readable and maintainable
+- Validate changes before committing them to the repository
+- Maintain consistent documentation across project sections
+- Review new features for reliability and usability
