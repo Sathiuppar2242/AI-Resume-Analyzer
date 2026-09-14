@@ -849,3 +849,9 @@ The project is maintained with incremental documentation and feature improvement
 - Display analysis results in a clear and understandable format
 - Present detected skills and job roles in an organized way
 - Give actionable suggestions to help users improve their resumes
+
+## Accessibility
+- Keep the resume upload interface simple and easy to understand
+- Use clear labels and messages throughout the application
+- Present analysis results in a readable and organized format
+- Provide understandable feedback when uploaded files cannot be processed
