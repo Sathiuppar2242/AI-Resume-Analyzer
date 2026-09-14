@@ -861,3 +861,9 @@ The project is maintained with incremental documentation and feature improvement
 - Accept only supported PDF and DOCX resume formats
 - Ensure uploaded documents contain readable resume content
 - Provide clear feedback when an uploaded file fails validation
+
+## Result Presentation
+- Display the overall resume score clearly after analysis
+- Present detected skills in an organized format
+- Show relevant job-role insights based on resume content
+- Display improvement suggestions in a user-friendly manner
