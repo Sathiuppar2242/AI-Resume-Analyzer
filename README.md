@@ -855,3 +855,9 @@ The project is maintained with incremental documentation and feature improvement
 - Use clear labels and messages throughout the application
 - Present analysis results in a readable and organized format
 - Provide understandable feedback when uploaded files cannot be processed
+
+## Input Validation
+- Validate uploaded files before starting resume analysis
+- Accept only supported PDF and DOCX resume formats
+- Ensure uploaded documents contain readable resume content
+- Provide clear feedback when an uploaded file fails validation
