@@ -891,3 +891,9 @@ The project is maintained with incremental documentation and feature improvement
 - Design analysis steps so new job roles and skills can be added easily
 - Separate file processing and analysis logic for easier maintenance
 - Consider efficient resource usage when handling multiple resume uploads
+
+## Documentation Guidelines
+- Keep README instructions clear and up to date
+- Document important changes when new features are introduced
+- Use consistent headings and formatting throughout the project
+- Include setup, usage, and testing information for future contributors
