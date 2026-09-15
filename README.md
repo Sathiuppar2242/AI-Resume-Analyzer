@@ -873,3 +873,9 @@ The project is maintained with incremental documentation and feature improvement
 - Validate changes before committing them to the repository
 - Maintain consistent documentation across project sections
 - Review new features for reliability and usability
+
+## Security Best Practices
+- Keep secret keys and credentials outside the repository
+- Validate uploaded files before processing them
+- Avoid exposing sensitive resume content in logs
+- Review application dependencies regularly for security updates
