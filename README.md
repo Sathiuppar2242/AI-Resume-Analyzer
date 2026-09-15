@@ -885,3 +885,9 @@ The project is maintained with incremental documentation and feature improvement
 - Avoid unnecessary repeated file-processing operations
 - Keep preprocessing steps efficient for uploaded documents
 - Monitor application performance as the project grows
+
+## Scalability Considerations
+- Keep resume processing components modular as the application grows
+- Design analysis steps so new job roles and skills can be added easily
+- Separate file processing and analysis logic for easier maintenance
+- Consider efficient resource usage when handling multiple resume uploads
