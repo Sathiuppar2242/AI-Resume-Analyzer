@@ -879,3 +879,9 @@ The project is maintained with incremental documentation and feature improvement
 - Validate uploaded files before processing them
 - Avoid exposing sensitive resume content in logs
 - Review application dependencies regularly for security updates
+
+## Performance Optimization
+- Process only the required resume content during analysis
+- Avoid unnecessary repeated file-processing operations
+- Keep preprocessing steps efficient for uploaded documents
+- Monitor application performance as the project grows
