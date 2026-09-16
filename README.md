@@ -897,3 +897,9 @@ The project is maintained with incremental documentation and feature improvement
 - Document important changes when new features are introduced
 - Use consistent headings and formatting throughout the project
 - Include setup, usage, and testing information for future contributors
+
+## Compatibility
+- The application is designed to run in a Python environment with the required dependencies installed
+- PDF and DOCX files are supported as documented input formats
+- Verify dependency compatibility when changing the Python environment
+- Test the application after significant environment or dependency changes
