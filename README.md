@@ -903,3 +903,9 @@ The project is maintained with incremental documentation and feature improvement
 - PDF and DOCX files are supported as documented input formats
 - Verify dependency compatibility when changing the Python environment
 - Test the application after significant environment or dependency changes
+
+## Release Checklist
+- Verify the application runs successfully before a release
+- Confirm supported PDF and DOCX inputs are processed correctly
+- Review recent documentation and configuration changes
+- Test important application workflows before publishing updates
