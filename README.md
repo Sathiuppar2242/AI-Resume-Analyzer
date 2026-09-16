@@ -909,3 +909,9 @@ The project is maintained with incremental documentation and feature improvement
 - Confirm supported PDF and DOCX inputs are processed correctly
 - Review recent documentation and configuration changes
 - Test important application workflows before publishing updates
+
+## Backup and Recovery
+- Keep important project source files under version control
+- Push confirmed changes to the remote GitHub repository
+- Preserve important configuration and documentation updates
+- Restore the project from the latest verified repository state when required
