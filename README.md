@@ -915,3 +915,9 @@ The project is maintained with incremental documentation and feature improvement
 - Push confirmed changes to the remote GitHub repository
 - Preserve important configuration and documentation updates
 - Restore the project from the latest verified repository state when required
+
+## Testing Environment
+- Test the application in a clean Python environment when possible
+- Install all required dependencies before running the application
+- Verify resume upload and analysis workflows after environment changes
+- Check application behavior after updates to Python packages
