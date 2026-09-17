@@ -921,3 +921,9 @@ The project is maintained with incremental documentation and feature improvement
 - Install all required dependencies before running the application
 - Verify resume upload and analysis workflows after environment changes
 - Check application behavior after updates to Python packages
+
+## Common Use Cases
+- Review a resume for relevant skills and job roles
+- Identify areas that can be improved in a resume
+- Generate a quick overall resume assessment
+- Use the analysis results to guide resume updates
