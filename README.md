@@ -927,3 +927,9 @@ The project is maintained with incremental documentation and feature improvement
 - Identify areas that can be improved in a resume
 - Generate a quick overall resume assessment
 - Use the analysis results to guide resume updates
+
+## Project Dependencies
+- Use a supported Python environment for the application
+- Install Flask and the required resume processing libraries
+- Keep project dependencies updated when necessary
+- Verify the application after dependency changes
