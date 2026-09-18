@@ -933,3 +933,9 @@ The project is maintained with incremental documentation and feature improvement
 - Install Flask and the required resume processing libraries
 - Keep project dependencies updated when necessary
 - Verify the application after dependency changes
+
+## Configuration Guidelines
+- Keep application configuration consistent across development environments
+- Review configuration values before running the application
+- Avoid committing sensitive credentials or private configuration data
+- Recheck the application after configuration changes
