@@ -939,3 +939,9 @@ The project is maintained with incremental documentation and feature improvement
 - Review configuration values before running the application
 - Avoid committing sensitive credentials or private configuration data
 - Recheck the application after configuration changes
+
+## User Guidance
+- Upload a readable PDF or DOCX resume for analysis
+- Review the detected skills and job role information carefully
+- Use the improvement suggestions when updating resume content
+- Re-run the analysis after making significant resume changes
