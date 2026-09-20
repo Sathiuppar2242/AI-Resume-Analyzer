@@ -951,3 +951,10 @@ The project is maintained with incremental documentation and feature improvement
 - Use user feedback to improve the clarity of results
 - Consider usability feedback when updating the interface
 - Document meaningful improvements made from feedback
+
+## Resume Analysis Accuracy
+
+- Resume analysis results depend on the quality and completeness of the uploaded document
+- Clear and well-structured resume content can improve extraction accuracy
+- Detected skills and job roles should be reviewed before making final resume changes
+- Analysis results are intended to provide guidance rather than replace human review
