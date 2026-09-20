@@ -958,3 +958,10 @@ The project is maintained with incremental documentation and feature improvement
 - Clear and well-structured resume content can improve extraction accuracy
 - Detected skills and job roles should be reviewed before making final resume changes
 - Analysis results are intended to provide guidance rather than replace human review
+
+## Resume Content Quality
+
+- Use clear and readable text in uploaded resumes
+- Keep resume sections organized with meaningful headings
+- Include relevant skills, education, projects, and experience where applicable
+- Avoid unnecessary formatting that may affect text extraction
