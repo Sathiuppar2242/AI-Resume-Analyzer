@@ -972,3 +972,10 @@ The project is maintained with incremental documentation and feature improvement
 - Check whether key professional information is present and readable
 - Use the analysis results to identify missing or incomplete content
 - Update the resume when important information needs to be added
+
+## Resume Review Process
+
+- Upload a supported resume file for analysis
+- Review the extracted skills and detected job roles
+- Examine the overall assessment and improvement suggestions
+- Apply relevant improvements and analyze the updated resume again
