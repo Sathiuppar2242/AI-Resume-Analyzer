@@ -979,3 +979,10 @@ The project is maintained with incremental documentation and feature improvement
 - Review the extracted skills and detected job roles
 - Examine the overall assessment and improvement suggestions
 - Apply relevant improvements and analyze the updated resume again
+
+## Resume Improvement Tips
+
+- Keep resume content concise and relevant to the target role
+- Highlight technical skills and practical project experience
+- Review improvement suggestions before updating the resume
+- Reanalyze the resume after making meaningful changes
