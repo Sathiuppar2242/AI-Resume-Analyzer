@@ -965,3 +965,10 @@ The project is maintained with incremental documentation and feature improvement
 - Keep resume sections organized with meaningful headings
 - Include relevant skills, education, projects, and experience where applicable
 - Avoid unnecessary formatting that may affect text extraction
+
+## Resume Section Coverage
+
+- Review the resume for important sections before analysis
+- Check whether key professional information is present and readable
+- Use the analysis results to identify missing or incomplete content
+- Update the resume when important information needs to be added
