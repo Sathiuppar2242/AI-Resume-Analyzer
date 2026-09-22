@@ -1000,3 +1000,10 @@ The project is maintained with incremental documentation and feature improvement
 - Use consistent and readable formatting throughout the resume
 - Verify extracted information against the original resume
 - Review the final resume manually before submitting it
+
+## Resume Analysis Limitations
+
+- Analysis quality depends on the content and structure of the uploaded resume
+- Automated skill and role detection may not identify every relevant detail
+- Results should be reviewed for accuracy and context
+- The application provides analysis support and does not replace professional review
