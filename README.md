@@ -986,3 +986,10 @@ The project is maintained with incremental documentation and feature improvement
 - Highlight technical skills and practical project experience
 - Review improvement suggestions before updating the resume
 - Reanalyze the resume after making meaningful changes
+
+## Resume Analysis Recommendations
+
+- Review extracted information before making resume decisions
+- Compare detected skills with the requirements of the target role
+- Use identified improvement areas to refine resume content
+- Keep the resume updated as skills and experience develop
