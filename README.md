@@ -993,3 +993,10 @@ The project is maintained with incremental documentation and feature improvement
 - Compare detected skills with the requirements of the target role
 - Use identified improvement areas to refine resume content
 - Keep the resume updated as skills and experience develop
+
+## Resume Analysis Best Practices
+
+- Upload the latest version of the resume for analysis
+- Use consistent and readable formatting throughout the resume
+- Verify extracted information against the original resume
+- Review the final resume manually before submitting it
