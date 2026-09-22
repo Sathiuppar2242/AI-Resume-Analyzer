@@ -1007,3 +1007,10 @@ The project is maintained with incremental documentation and feature improvement
 - Automated skill and role detection may not identify every relevant detail
 - Results should be reviewed for accuracy and context
 - The application provides analysis support and does not replace professional review
+
+## Resume Analysis Workflow Improvements
+
+- Keep the analysis workflow simple and easy to follow
+- Provide clear feedback after resume processing
+- Present extracted information in an organized format
+- Refine the workflow when usability issues are identified
