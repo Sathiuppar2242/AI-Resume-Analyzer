@@ -1028,3 +1028,10 @@ The project is maintained with incremental documentation and feature improvement
 - Use clear naming for application modules and processing functions
 - Update documentation when analysis behavior changes
 - Test related functionality after maintenance changes
+
+## Resume Analysis Extensibility
+
+- Keep the analysis workflow flexible for future feature additions
+- Design processing components so new resume attributes can be supported
+- Allow improvements to skill and job role detection over time
+- Update documentation when new analysis capabilities are introduced
