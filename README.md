@@ -1021,3 +1021,10 @@ The project is maintained with incremental documentation and feature improvement
 - Validate extracted information before displaying analysis results
 - Handle unexpected resume content without interrupting the user workflow
 - Review application behavior after changes to analysis logic
+
+## Resume Analysis Maintainability
+
+- Keep resume analysis components organized and easy to understand
+- Use clear naming for application modules and processing functions
+- Update documentation when analysis behavior changes
+- Test related functionality after maintenance changes
