@@ -1014,3 +1014,10 @@ The project is maintained with incremental documentation and feature improvement
 - Provide clear feedback after resume processing
 - Present extracted information in an organized format
 - Refine the workflow when usability issues are identified
+
+## Resume Analysis Reliability
+
+- Keep resume processing consistent across supported file formats
+- Validate extracted information before displaying analysis results
+- Handle unexpected resume content without interrupting the user workflow
+- Review application behavior after changes to analysis logic
