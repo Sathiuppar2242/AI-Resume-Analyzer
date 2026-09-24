@@ -1035,3 +1035,10 @@ The project is maintained with incremental documentation and feature improvement
 - Design processing components so new resume attributes can be supported
 - Allow improvements to skill and job role detection over time
 - Update documentation when new analysis capabilities are introduced
+
+## Resume Analysis Customization
+
+- Keep resume analysis settings adaptable to project requirements
+- Allow analysis rules to be updated as new requirements are identified
+- Support future customization of skills and job role detection
+- Document customization changes to keep the project easy to maintain
