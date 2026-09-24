@@ -1056,3 +1056,10 @@ The project is maintained with incremental documentation and feature improvement
 - Apply processing rules consistently during resume evaluation
 - Verify analysis results after changes to processing logic
 - Keep documentation aligned with the current analysis behavior
+
+## Resume Analysis Quality Control
+
+- Review analysis results for consistency and completeness
+- Validate extracted resume information before presenting results
+- Check analysis behavior after application updates
+- Keep quality checks aligned with supported resume features
