@@ -1042,3 +1042,10 @@ The project is maintained with incremental documentation and feature improvement
 - Allow analysis rules to be updated as new requirements are identified
 - Support future customization of skills and job role detection
 - Document customization changes to keep the project easy to maintain
+
+## Resume Analysis Adaptability
+
+- Keep the analysis workflow adaptable to changing resume formats
+- Allow processing rules to evolve with project requirements
+- Support future improvements to resume content detection
+- Maintain clear documentation when adaptability changes are introduced
