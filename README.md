@@ -1049,3 +1049,10 @@ The project is maintained with incremental documentation and feature improvement
 - Allow processing rules to evolve with project requirements
 - Support future improvements to resume content detection
 - Maintain clear documentation when adaptability changes are introduced
+
+## Resume Analysis Consistency
+
+- Maintain consistent analysis behavior across supported resume files
+- Apply processing rules consistently during resume evaluation
+- Verify analysis results after changes to processing logic
+- Keep documentation aligned with the current analysis behavior
