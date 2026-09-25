@@ -1077,3 +1077,10 @@ The project is maintained with incremental documentation and feature improvement
 - Check for unexpected analysis results or processing issues
 - Review application behavior after dependency or code updates
 - Document important monitoring observations for future maintenance
+
+## Resume Analysis Review Cycle
+
+- Review analysis behavior regularly during project maintenance
+- Recheck resume processing after feature or dependency changes
+- Record useful findings that can improve future analysis updates
+- Keep the review process aligned with project requirements
