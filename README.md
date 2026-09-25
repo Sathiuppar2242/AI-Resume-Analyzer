@@ -1070,3 +1070,10 @@ The project is maintained with incremental documentation and feature improvement
 - Confirm extracted information is suitable for evaluation
 - Review analysis results for unexpected or incomplete output
 - Repeat verification after significant analysis workflow changes
+
+## Resume Analysis Monitoring
+
+- Monitor resume processing behavior during application use
+- Check for unexpected analysis results or processing issues
+- Review application behavior after dependency or code updates
+- Document important monitoring observations for future maintenance
