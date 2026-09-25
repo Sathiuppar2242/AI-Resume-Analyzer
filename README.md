@@ -1084,3 +1084,10 @@ The project is maintained with incremental documentation and feature improvement
 - Recheck resume processing after feature or dependency changes
 - Record useful findings that can improve future analysis updates
 - Keep the review process aligned with project requirements
+
+## Resume Analysis Improvement Cycle
+
+- Identify areas where resume analysis can be improved
+- Use testing and review findings to guide future enhancements
+- Improve processing logic without affecting supported workflows
+- Update documentation when meaningful improvements are introduced
