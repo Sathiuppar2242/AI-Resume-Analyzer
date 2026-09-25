@@ -1063,3 +1063,10 @@ The project is maintained with incremental documentation and feature improvement
 - Validate extracted resume information before presenting results
 - Check analysis behavior after application updates
 - Keep quality checks aligned with supported resume features
+
+## Resume Analysis Verification
+
+- Verify uploaded resume content before starting analysis
+- Confirm extracted information is suitable for evaluation
+- Review analysis results for unexpected or incomplete output
+- Repeat verification after significant analysis workflow changes
