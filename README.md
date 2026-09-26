@@ -1105,3 +1105,10 @@ The project is maintained with incremental documentation and feature improvement
 - Introduce new analysis features while preserving existing functionality
 - Test feature additions before integrating them into the workflow
 - Keep documentation updated as the project capabilities grow
+
+## Resume Analysis Feature Validation
+
+- Validate new resume analysis features before release
+- Check feature behavior with supported resume formats
+- Confirm new functionality works with existing analysis workflows
+- Document validation results and required follow-up improvements
