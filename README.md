@@ -1133,3 +1133,10 @@ The project is maintained with incremental documentation and feature improvement
 - Apply feature behavior uniformly throughout the analysis workflow
 - Verify consistency after feature updates or maintenance changes
 - Document any important changes affecting feature consistency
+
+## Resume Analysis Feature Reliability
+
+- Keep resume analysis features reliable during normal application use
+- Validate feature behavior after code changes and updates
+- Handle unexpected inputs without interrupting supported workflows
+- Document reliability issues and relevant maintenance actions
