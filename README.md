@@ -1119,3 +1119,10 @@ The project is maintained with incremental documentation and feature improvement
 - Review feature behavior after code and dependency updates
 - Fix issues without disrupting supported analysis workflows
 - Keep feature maintenance activities documented for future development
+
+## Resume Analysis Feature Documentation
+
+- Document the purpose and behavior of important analysis features
+- Keep feature descriptions clear for future contributors
+- Update documentation when feature behavior changes
+- Use consistent documentation practices across the project
