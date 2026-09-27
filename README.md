@@ -1140,3 +1140,10 @@ The project is maintained with incremental documentation and feature improvement
 - Validate feature behavior after code changes and updates
 - Handle unexpected inputs without interrupting supported workflows
 - Document reliability issues and relevant maintenance actions
+
+## Resume Analysis Feature Scalability
+
+- Keep analysis features structured for future project growth
+- Design processing components to support additional resume analysis needs
+- Consider performance when extending analysis functionality
+- Document scalability-related changes as the project evolves
