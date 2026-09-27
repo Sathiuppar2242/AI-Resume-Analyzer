@@ -1126,3 +1126,10 @@ The project is maintained with incremental documentation and feature improvement
 - Keep feature descriptions clear for future contributors
 - Update documentation when feature behavior changes
 - Use consistent documentation practices across the project
+
+## Resume Analysis Feature Consistency
+
+- Keep analysis features consistent across supported resume inputs
+- Apply feature behavior uniformly throughout the analysis workflow
+- Verify consistency after feature updates or maintenance changes
+- Document any important changes affecting feature consistency
