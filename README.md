@@ -1182,3 +1182,10 @@ The project is maintained with incremental documentation and feature improvement
 - Define clear objectives for planned resume analysis improvements
 - Consider testing and maintenance requirements during planning
 - Document planned changes before implementing significant features
+
+## Resume Analysis Continuous Improvement
+
+- Review the project regularly for opportunities to improve resume analysis
+- Use testing feedback to guide future refinements
+- Preserve existing functionality while introducing improvements
+- Keep documentation updated with meaningful project changes
