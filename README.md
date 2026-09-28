@@ -1147,3 +1147,10 @@ The project is maintained with incremental documentation and feature improvement
 - Design processing components to support additional resume analysis needs
 - Consider performance when extending analysis functionality
 - Document scalability-related changes as the project evolves
+
+## Resume Analysis Feature Extensibility
+
+- Keep analysis features modular for future extensions
+- Allow new resume attributes and evaluation rules to be integrated cleanly
+- Preserve existing functionality when adding new analysis capabilities
+- Document extension points to support future development
