@@ -1154,3 +1154,10 @@ The project is maintained with incremental documentation and feature improvement
 - Allow new resume attributes and evaluation rules to be integrated cleanly
 - Preserve existing functionality when adding new analysis capabilities
 - Document extension points to support future development
+
+## Resume Analysis Future Expansion
+
+- Plan future analysis capabilities based on project requirements
+- Support additional resume attributes as the project evolves
+- Extend evaluation rules while maintaining existing workflows
+- Keep future expansion documented for easier project maintenance
