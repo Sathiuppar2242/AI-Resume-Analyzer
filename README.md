@@ -1175,3 +1175,10 @@ The project is maintained with incremental documentation and feature improvement
 - Consider reliability and usability when planning feature changes
 - Balance new functionality with existing project requirements
 - Review feature priorities as the project develops
+
+## Resume Analysis Feature Planning Process
+
+- Review project requirements before planning analysis feature changes
+- Define clear objectives for planned resume analysis improvements
+- Consider testing and maintenance requirements during planning
+- Document planned changes before implementing significant features
