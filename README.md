@@ -1161,3 +1161,10 @@ The project is maintained with incremental documentation and feature improvement
 - Support additional resume attributes as the project evolves
 - Extend evaluation rules while maintaining existing workflows
 - Keep future expansion documented for easier project maintenance
+
+## Resume Analysis Feature Roadmap
+
+- Define practical milestones for future analysis improvements
+- Organize planned enhancements according to project needs
+- Review roadmap items as new requirements are identified
+- Update roadmap documentation when planned features change
