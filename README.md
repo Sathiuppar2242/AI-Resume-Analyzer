@@ -1203,3 +1203,10 @@ The project is maintained with incremental documentation and feature improvement
 - Keep related analysis capabilities documented together
 - Make feature documentation easy to understand and maintain
 - Reflect the current project structure in documentation
+
+## Resume Analysis Feature Clarity
+
+- Use clear descriptions for each resume analysis capability
+- Explain feature behavior in a simple and consistent manner
+- Avoid unnecessary complexity in feature documentation
+- Keep user-facing descriptions aligned with actual functionality
