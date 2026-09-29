@@ -1196,3 +1196,10 @@ The project is maintained with incremental documentation and feature improvement
 - Keep feature descriptions consistent with the current application
 - Update documentation when analysis behavior changes
 - Provide clear information for users and future developers
+
+## Resume Analysis Feature Organization
+
+- Organize resume analysis features into clear functional areas
+- Keep related analysis capabilities documented together
+- Make feature documentation easy to understand and maintain
+- Reflect the current project structure in documentation
