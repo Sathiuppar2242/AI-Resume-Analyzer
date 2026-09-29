@@ -1210,3 +1210,10 @@ The project is maintained with incremental documentation and feature improvement
 - Explain feature behavior in a simple and consistent manner
 - Avoid unnecessary complexity in feature documentation
 - Keep user-facing descriptions aligned with actual functionality
+
+## Resume Analysis Feature Structure
+
+- Keep resume analysis features structured for easier maintenance
+- Separate related functionality into logical components
+- Maintain consistent organization as new features are added
+- Document structural changes when they affect project usage
