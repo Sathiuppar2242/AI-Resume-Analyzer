@@ -1189,3 +1189,10 @@ The project is maintained with incremental documentation and feature improvement
 - Use testing feedback to guide future refinements
 - Preserve existing functionality while introducing improvements
 - Keep documentation updated with meaningful project changes
+
+## Resume Analysis Feature Documentation
+
+- Document important resume analysis features clearly
+- Keep feature descriptions consistent with the current application
+- Update documentation when analysis behavior changes
+- Provide clear information for users and future developers
